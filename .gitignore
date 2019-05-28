@@ -1,0 +1,4 @@
+*.DS_Store
+.idea/
+*geckodriver.log
+env/conda-env-investing/
