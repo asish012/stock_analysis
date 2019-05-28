@@ -1,4 +1,6 @@
 *.DS_Store
 .idea/
+
 *geckodriver.log
+cfg/iexfinance.cfg
 env/conda-env-investing/
