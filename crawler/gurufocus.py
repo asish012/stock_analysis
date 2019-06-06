@@ -3,7 +3,9 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 
 class GuruFocus:
-    custom_search_url = 'https://www.gurufocus.com/industry_overview.php?industry=Medical-Devices'
+    # custom_search_url = 'https://www.gurufocus.com/industry_overview.php?industry=Medical-Devices'
+    # custom_search_url = 'https://www.gurufocus.com/financials/NAS:GOOGL'
+    custom_search_url = 'https://quickfs.net/company/GOOGL'
 
     def __init__(self):
 
