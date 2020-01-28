@@ -5,3 +5,5 @@
 *geckodriver.log
 cfg/iexfinance.cfg
 env/conda-env-investing/
+
+*checkpoint.ipynb
