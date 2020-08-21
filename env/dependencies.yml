@@ -16,6 +16,10 @@ dependencies:
   - seaborn=0.9.0
   - selenium=3.141.0
   - lxml=4.3.3
+  - dash
+  - dash-renderer
+  - dash-html-components
+  - dash-core-components
   - pip:
     - iexfinance
 channels:

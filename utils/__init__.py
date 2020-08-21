@@ -10,7 +10,7 @@ _default_config_folder_path = os.path.join(project_path, 'cfg/')
 
 def load_configuration(name, section='DEFAULT', config_folder_path=_default_config_folder_path):
     config = ConfigParser()
-    config_file_path = os.path.join(config_folder_path, name)
+    config_file_path = os.path.join(config_folder_path, f"{name}.cfg")
     config.read(config_file_path)
     section = config[section]
 

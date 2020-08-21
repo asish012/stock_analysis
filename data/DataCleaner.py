@@ -2,6 +2,10 @@ import argparse
 import re
 import os
 import shutil
+from utils import project_path
+
+
+_data_path = os.path.join(project_path, 'data/csv/')
 
 
 def clean_line(line):
@@ -12,6 +16,7 @@ def clean_line(line):
     line = line.replace('$', '')
     line = line.replace('-|', '0|')
     line = line.replace(' |', '|')
+    line = re.sub(r'-$', '0', line)
     line = re.sub(r'^Equity\|', 'Equity Growth|', line)
     line = re.sub(r'^Free Cash Flow\|', 'Free Cash Flow Growth|', line)
     return line
@@ -23,16 +28,16 @@ def main():
     args = vars(parser.parse_args())
     ticker = args['ticker']
 
-    filename = '{}.csv'.format(ticker)
-    temp_file = '{}_temp.csv'.format(ticker)
-    with open(filename, mode='r', encoding='utf-8') as f, open(temp_file, mode='w') as temp:
+    file_path = os.path.join(_data_path, f'{ticker}.csv')
+    temp_file_path = os.path.join(_data_path, f'{ticker}_temp.csv')
+    with open(file_path, mode='r', encoding='utf-8') as f, open(temp_file_path, mode='w') as temp:
         for line in f:
             line = clean_line(line)
             temp.write(line)
             # print(line)
-    
+
     # replace old file
-    shutil.move(temp_file, filename)
+    shutil.move(temp_file_path, file_path)
 
 
 if __name__ == '__main__':

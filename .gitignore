@@ -1,9 +1,28 @@
+# DONT PUSH README FOR NOW. BECAUSE IT CONTAINS API KEY
+README.md
+
+# System files
 *.DS_Store
+
+# IDE settings
 .idea/
+
+# Python Cache
 *__pycache__*
 
+# Driver logs
 *geckodriver.log
-cfg/iexfinance.cfg
-env/conda-env-investing/
 
+# Notebook junks
 *checkpoint.ipynb
+
+# Environment
+env/
+
+# Configuration secrets
+cfg/*.cfg
+
+# Data
+data/csv/*
+data/mongo/*
+analysis/*
