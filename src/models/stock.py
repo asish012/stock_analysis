@@ -18,8 +18,10 @@ class Stat:
 
     @classmethod
     def from_dict(cls, stat_data):
-        # This is a manual approach to prepare Stat object from quickfs statistics
-        # Instead, use the default constructor with **kwargs
+        print("""
+        ----- This is a manual approach to prepare Stat object from quickfs statistics
+        ----- Instead, use the default constructor (with **kwargs) passing quickfs statistics as dict
+        """)
         stat = Stat()
         if "revenue" in stat_data:
             stat.revenue = stat_data["revenue"]

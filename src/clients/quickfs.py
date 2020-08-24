@@ -90,7 +90,9 @@ class QuickFS:
 
     @staticmethod
     def _prepare_stock(ticker, stat_data):
-        stat = Stat(**stat_data)        # Use the default constructor with **kwargs
+        # Mapping between Stat attributes and QuickFS result keys are expected
+        # Construct stat object automatically with the default constructor with **kwargs
+        stat = Stat(**stat_data)
 
         stock = Stock(ticker=ticker)
         stock.stat = stat
